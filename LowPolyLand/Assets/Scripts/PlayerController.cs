@@ -2,69 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class AnimControl : MonoBehaviour {
 
-    public float movementSpeed;
-    public float velocity;
-    public Rigidbody rb;
-    public Animator anim;
+    private Animator mAnimator;
 
-	// Use this for initialization
-	void Start ()
+    void Start()
     {
-        //rb = GetComponent<Rigidbody>();
-        //anim = GetComponent<Animator>();
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        GetInput();
-        Move();
+        mAnimator = GetComponent<Animator>();
     }
 
-    void GetInput()
+     void Update()
     {
-        //move left
-        if (Input.GetKey(KeyCode.A))
-        {
-            SetVelocity(-1);
-        }
-        else if (Input.GetKeyUp(KeyCode.A))
-        {
-            SetVelocity(0);
-        }
+        bool Walking = Input.GetKey(KeyCode.W);
+        mAnimator.SetBool("Walking", Walking);
 
-        //move right
-        if (Input.GetKey(KeyCode.D))
+        if(Input.GetKeyDown(KeyCode.Z))
         {
-            SetVelocity(1);
+            mAnimator.SetTrigger("Attack");
         }
-        else if (Input.GetKeyUp(KeyCode.D))
-        {
-            SetVelocity(0);
-        }
-    }
-
-    void Move()
-    {
-        if(velocity == 0)
-        {
-            anim.SetInteger("Condition", 0);
-            return;
-        }
-        else
-        {
-            anim.SetInteger("Condition", 1);
-        }
-        rb.MovePosition(transform.position + (Vector3.right * velocity * movementSpeed * Time.deltaTime));
-    }
-
-    void SetVelocity(float dir)
-    {
-        if (dir < 0) transform.LookAt(transform.position + Vector3.left);
-        else if (dir > 0) transform.LookAt(transform.position + Vector3.right);
-
-        velocity = dir;
     }
 }
