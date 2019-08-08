@@ -10,7 +10,7 @@ public enum GoblinComboState
     PUNCH_3
 }
 
-public class GoblinPlayerAttack : MonoBehaviour
+public class PlayerAttack : MonoBehaviour
 {
     private Animator player_Anim;
 
@@ -59,21 +59,21 @@ public class GoblinPlayerAttack : MonoBehaviour
 
         if(Input.GetKeyUp(KeyCode.Z))
         {
-            player_Anim.SetBool("Attack2", false);
-            player_Anim.SetBool("Attack3", false);
-            player_Anim.SetBool("Attack1", true);
+            player_Anim.SetBool("Punch2", false);
+            player_Anim.SetBool("Punch3", false);
+            player_Anim.SetBool("Punch1", true);
         }
         else if(Input.GetKeyUp(KeyCode.X))
         {
-            player_Anim.SetBool("Attack1", false);
-            player_Anim.SetBool("Attack3", false);
-            player_Anim.SetBool("2", true);
+            player_Anim.SetBool("Punch1", false);
+            player_Anim.SetBool("Punch3", false);
+            player_Anim.SetBool("Punch2", true);
         }
         else if (Input.GetKeyUp(KeyCode.C))
         {
-            player_Anim.SetBool("Attack1", false);
-            player_Anim.SetBool("Attack2", false);
-            player_Anim.SetBool("Attack3", true);
+            player_Anim.SetBool("Punch1", false);
+            player_Anim.SetBool("Punch2", false);
+            player_Anim.SetBool("Punch3", true);
         }
 
     }// combo attacks
