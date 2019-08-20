@@ -767,18 +767,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1436176657}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1978081688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978081687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e109d382ae91b14c9efd499b9809649, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1978081689
 Animator:
   serializedVersion: 3
@@ -804,19 +792,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1436176657}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1978081691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978081687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd316ca6a05c8454a92accab91e7218d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!143 &1978081692
 CharacterController:
   m_ObjectHideFlags: 0
