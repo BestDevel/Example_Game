@@ -1,0 +1,2 @@
+Problema: il nemico senza Animator si comporta normalmente. Con l'aggiunta delle animazioni e di un Capsule Collider, con valori identici
+e non a quelli del Player, dopo qualche secondo di stazionamento in Idle sprofonda nel piano.
